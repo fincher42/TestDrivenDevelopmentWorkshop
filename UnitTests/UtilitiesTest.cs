@@ -1,5 +1,4 @@
-﻿using FluentAssertions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TestDrivenDevelopment;
 
 namespace TestDrivenDevelopmentUnitTests
@@ -36,7 +35,7 @@ namespace TestDrivenDevelopmentUnitTests
             var url = Utilities.BuildUrl(host, name, value);
 
             // Assert
-            url.ShouldBeEquivalentTo($"{host}?{name}={value}");
+            Assert.AreEqual(url,$"{host}?{name}={value}");
         }
     }
 }
